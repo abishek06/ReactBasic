@@ -1,14 +1,19 @@
-var element = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", { id: "h1child1" }, "This is h1 Element"),
-    React.createElement("h2", { id: "h1child2" }, "This is h2 Element"),
-  ]),
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", { id: "h1child1" }, "This is h1 Element"),
-    React.createElement("h2", { id: "h1child2" }, "This is h2 Element"),
-  ]),
-]);
+import React from "react";
+import ReactDOM from "react-dom";
+
+const title = (
+  <div>
+    <h1>Welcome to foundation series</h1>
+  </div>
+);
+
+const HeadingComponent = () => (
+  <div id="container">
+    {title}
+    <p>This is paragraph Tag</p>
+  </div>
+);
 
 var root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(element);
+root.render(<HeadingComponent />);
